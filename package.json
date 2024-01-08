@@ -1,0 +1,7 @@
+{
+    "name": "sdk-nodejs",
+    "packageManager": "yarn@4.0.2",
+    "workspaces": [
+        "packages/*"
+    ]
+}
