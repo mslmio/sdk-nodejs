@@ -1,7 +1,14 @@
 {
     "name": "sdk-nodejs",
+    "version": "1.0.0",
+    "private": true,
     "packageManager": "yarn@4.0.2",
     "workspaces": [
         "packages/*"
-    ]
+    ],
+    "scripts": {
+        "install": "yarn install",
+        "build": "yarn workspaces run build",
+        "test": "yarn workspaces run test"
+    }
 }
