@@ -90,6 +90,12 @@ In order to run the tests, run:
 
     $ npm test
 
+## Contributing
+
+Contributions are welcome! If you encounter any issues or have suggestions,
+feel free to open an [issue](https://github.com/mslmio/sdk-nodejs/issues) or
+submit a pull request.
+
 ## Other Libraries
 
 There are official Mslm client libraries available for many languages including
