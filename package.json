@@ -6,7 +6,6 @@
         "packages/*"
     ],
     "scripts": {
-        "install": "yarn install",
         "build": "yarn workspaces run build",
         "test": "yarn workspaces run test"
     }
