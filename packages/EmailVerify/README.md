@@ -12,13 +12,13 @@ API.
 **npm**
 
 ```bash
-npm install @mslm/emailverify
+npm install @mslm/email_verify
 ```
 
 **yarn**
 
 ```bash
-yarn add @mslm/emailverify
+yarn add @mslm/email_verify
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ yarn add @mslm/emailverify
 **Typescript**
 
 ```typescript
-import EmailVerify from "@mslm/emailverify";
+import EmailVerify from "@mslm/email_verify";
 
 // Replace 'YOUR_API_KEY' with your actual MSLM API key
 const emailVerify = new EmailVerify("YOUR_API_KEY");
@@ -45,7 +45,7 @@ emailVerify
 **Javascript**
 
 ```javascript
-const EmailVerify = require("@mslm/emailverify");
+const EmailVerify = require("@mslm/email_verify");
 
 // Replace 'YOUR_API_KEY' with your actual MSLM API key
 const emailVerify = new EmailVerify("YOUR_API_KEY");

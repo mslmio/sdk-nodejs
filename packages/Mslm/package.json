@@ -8,8 +8,8 @@
         "verify",
         "otp"
     ],
-    "author": "Muhammad Ahmad <118795373+muhammadahmadmslm@users.noreply.github.com>",
-    "homepage": "https://github.com/mslmio/sdk-nodejs#readme",
+    "author": "Mslm <support@mslm.io>",
+    "homepage": "https://github.com/mslmio/sdk-nodejs",
     "license": "MIT",
     "main": "lib/Mslm.ts",
     "directories": {
@@ -37,7 +37,7 @@
         "url": "https://github.com/mslmio/sdk-nodejs/issues"
     },
     "dependencies": {
-        "@mslm/emailverify": "*",
+        "@mslm/email_verify": "*",
         "@mslm/otp": "*"
     },
     "devDependencies": {

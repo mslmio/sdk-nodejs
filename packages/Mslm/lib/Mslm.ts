@@ -1,7 +1,7 @@
 /**
  * Mslm class for handling email verification and OTP (One-Time Password) functionality.
  */
-import EmailVerify from "@mslm/emailverify";
+import EmailVerify from "@mslm/email_verify";
 import OTP from "@mslm/otp";
 
 export default class Mslm {

@@ -6,8 +6,8 @@
         "mslm",
         "otp"
     ],
-    "author": "Muhammad Ahmad <118795373+muhammadahmadmslm@users.noreply.github.com>",
-    "homepage": "https://github.com/mslmio/sdk-nodejs#readme",
+    "author": "Mslm <support@mslm.io>",
+    "homepage": "https://github.com/mslmio/sdk-nodejs",
     "license": "MIT",
     "main": "lib/OTP.ts",
     "directories": {
