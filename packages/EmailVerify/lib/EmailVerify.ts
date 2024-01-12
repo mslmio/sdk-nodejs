@@ -1,6 +1,6 @@
-import { EmailVerificationResult } from "./EmailVerificationResult";
-import VERSION from "./version";
-import ApiLimitError from "./apiLimitError";
+import { EmailVerificationResult } from './EmailVerificationResult';
+import VERSION from './version';
+import ApiLimitError from './apiLimitError';
 
 const clientUserAgent = `mslm/nodejs/${VERSION}`;
 
@@ -23,13 +23,11 @@ export default class EmailVerify {
      * @param email The email address to be verified.
      * @returns A Promise resolving to an EmailVerificationResult.
      */
-    public async singleVerify(
-        email: string
-    ): Promise<EmailVerificationResult> {
+    public async singleVerify(email: string): Promise<EmailVerificationResult> {
         // Construct the query parameters
         const queryParams = new URLSearchParams({
             email: email,
-            apikey: this.apiKey // Use the stored API key
+            apikey: this.apiKey, // Use the stored API key
         });
 
         // Construct the full URL with query parameters
@@ -37,11 +35,11 @@ export default class EmailVerify {
 
         const requestOptions = {
             headers: {
-                Accept: "application/json",
-                "Content-Type": "application/json",
-                "User-Agent": clientUserAgent
+                Accept: 'application/json',
+                'Content-Type': 'application/json',
+                'User-Agent': clientUserAgent,
             },
-            method: "GET"
+            method: 'GET',
         };
 
         try {
@@ -49,8 +47,7 @@ export default class EmailVerify {
             const response = await fetch(apiUrl, requestOptions);
 
             if (!this.is4xxOr5xx(response.status)) {
-                const emailVerificationResult: EmailVerificationResult =
-                    await response.json();
+                const emailVerificationResult: EmailVerificationResult = await response.json();
                 return emailVerificationResult;
             } else {
                 // error cases when status code is in 400 range
