@@ -26,17 +26,17 @@ yarn add mslm
 
 ## Usage
 
-**Typescript**
+**TypeScript**
 
 ```typescript
-import Mslm from "mslm";
+import Mslm from 'mslm';
 
-// Replace 'YOUR_API_KEY' with your actual MSLM API key
-const mslm = new Mslm("YOUR_API_KEY");
+// Replace 'YOUR_API_KEY' with your actual Mslm API key
+const mslm = new Mslm('YOUR_API_KEY');
 
 // Example: Perform email verification
 mslm.emailVerify
-    .singleVerify("example@email.com")
+    .singleVerify('example@email.com')
     .then((result) => {
         console.log(result);
     })
@@ -44,9 +44,9 @@ mslm.emailVerify
         console.error(error);
     });
 
-// Example: Send OTP to a phone number
+// Example: Send Otp to a phone number
 mslm.otp
-    .send("1234567890", "sms_template", 6, 300)
+    .send('1234567890', 'sms_template', 6, 300)
     .then((response) => {
         console.log(response);
     })
@@ -55,17 +55,17 @@ mslm.otp
     });
 ```
 
-**Javascript**
+**JavaScript**
 
 ```javascript
-const Mslm = require("mslm");
+const Mslm = require('mslm');
 
-// Replace 'YOUR_API_KEY' with your actual MSLM API key
-const mslm = new Mslm("YOUR_API_KEY");
+// Replace 'YOUR_API_KEY' with your actual Mslm API key
+const mslm = new Mslm('YOUR_API_KEY');
 
 // Example: Perform email verification
 mslm.emailVerify
-    .singleVerify("example@email.com")
+    .singleVerify('example@email.com')
     .then((result) => {
         console.log(result);
     })
@@ -73,9 +73,9 @@ mslm.emailVerify
         console.error(error);
     });
 
-// Example: Send OTP to a phone number
+// Example: Send Otp to a phone number
 mslm.otp
-    .send("1234567890", "sms_template", 6, 300)
+    .send('1234567890', 'sms_template', 6, 300)
     .then((response) => {
         console.log(response);
     })
@@ -83,28 +83,19 @@ mslm.otp
         console.error(error);
     });
 ```
-
-## Running tests
-
-In order to run the tests, run:
-
-    $ npm test
 
 ## Contributing
 
-Contributions are welcome! If you encounter any issues or have suggestions,
-feel free to open an [issue](https://github.com/mslmio/sdk-nodejs/issues) or
-submit a pull request.
+Contributions are welcome! If you encounter any issues or have suggestions, feel free to open an
+[issue](https://github.com/mslmio/sdk-nodejs/issues) or submit a pull request.
 
 ## Other Libraries
 
-There are official Mslm client libraries available for many languages including
-Go, Java, Swift etc.
+There are official Mslm API client libraries available for many languages including Go, Java, Swift etc.
 
 ## About Mslm
 
-mslm focuses on producing world-class business solutions. It’s the
-bread-and-butter of our business to prioritize quality on everything we touch.
-Excellence is a core value that defines our culture from top to bottom.
+Mslm focuses on producing world-class business solutions. It’s the bread-and-butter of our business to prioritize
+quality on everything we touch. Excellence is a core value that defines our culture from top to bottom.
 
 [![image](https://avatars.githubusercontent.com/u/50307970?s=200&v=4)](https://mslm.io/)

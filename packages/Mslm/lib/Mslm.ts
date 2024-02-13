@@ -1,8 +1,8 @@
 /**
- * Mslm class for handling email verification and OTP (One-Time Password) functionality.
+ * Mslm class for handling email verification and Otp (One-Time Password) functionality.
  */
-import EmailVerify from "@mslm/email_verify";
-import OTP from "@mslm/otp";
+import EmailVerify from '@mslm/email_verify';
+import Otp from '@mslm/otp';
 
 export default class Mslm {
     /**
@@ -11,16 +11,16 @@ export default class Mslm {
     public emailVerify: EmailVerify;
 
     /**
-     * Instance of the OTP class for handling One-Time Password functionality.
+     * Instance of the Otp class for handling One-Time Password functionality.
      */
-    public otp: OTP;
+    public otp: Otp;
 
     /**
      * Constructs an instance of the Mslm class with the provided API key.
-     * @param apiKey - The API key used for authentication in both EmailVerify and OTP instances.
+     * @param apiKey - The API key used for authentication in both EmailVerify and Otp instances.
      */
-    constructor(apiKey: string) {
+    constructor(apiKey: string = '') {
         this.emailVerify = new EmailVerify(apiKey);
-        this.otp = new OTP(apiKey);
+        this.otp = new Otp(apiKey);
     }
 }

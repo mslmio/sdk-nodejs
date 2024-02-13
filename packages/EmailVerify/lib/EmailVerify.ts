@@ -5,21 +5,21 @@ import ApiLimitError from './apiLimitError';
 const clientUserAgent = `mslm/nodejs/${VERSION}`;
 
 /**
- * Class for performing email verification using the MSLM API.
+ * Class for performing email verification using the Mslm API.
  */
 export default class EmailVerify {
     private apiKey: string;
 
     /**
      * Creates an instance of the EmailVerify class.
-     * @param apiKey The API key required for authentication with the MSLM API.
+     * @param apiKey The API key required for authentication with the Mslm API.
      */
-    constructor(apiKey: string) {
+    constructor(apiKey: string = '') {
         this.apiKey = apiKey;
     }
 
     /**
-     * Performs a single email verification using the MSLM API.
+     * Performs a single email verification using the Mslm API.
      * @param email The email address to be verified.
      * @returns A Promise resolving to an EmailVerificationResult.
      */

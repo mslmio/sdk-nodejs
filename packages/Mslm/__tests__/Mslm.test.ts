@@ -1,6 +1,6 @@
 import Mslm from '../lib/Mslm';
 
-let mslm = new Mslm('');
+let mslm = new Mslm();
 
 describe('Mslm', () => {
     test('Mslm Email Verify', async () => {
@@ -22,12 +22,12 @@ describe('Mslm', () => {
         expect(data.mx[1].pref).toEqual(5);
         expect(data.mx[2].host).toEqual('ALT2.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[2].pref).toEqual(5);
-        expect(data.mx[3].host).toEqual('ALT3.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[3].host).toEqual('ALT4.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[3].pref).toEqual(10);
-        expect(data.mx[4].host).toEqual('ALT4.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[4].host).toEqual('ALT3.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[4].pref).toEqual(10);
     });
-    test('Mslm Send OTP', async () => {
+    test('Mslm Send Otp', async () => {
         let data = await mslm.otp.send('+10000000000', 'hi there', 6, 6000);
         expect(data).toBeDefined();
     });

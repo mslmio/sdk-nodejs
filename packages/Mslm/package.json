@@ -1,7 +1,7 @@
 {
     "name": "mslm",
     "version": "1.0.0",
-    "description": "> TODO: description",
+    "description": "The official NodeJS SDK for Mslm APIs.",
     "keywords": [
         "mslm",
         "email",

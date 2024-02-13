@@ -4,8 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub issues](https://img.shields.io/github/issues/mslmio/sdk-nodejs)](https://github.com/mslmio/sdk-nodejs/issues)
 
-The official MSLM Node.js SDK for handling email verification using the MSLM
-API.
+The official Mslm Node.js SDK for handling email verification using the Mslm API.
 
 ## Installation
 
@@ -26,14 +25,14 @@ yarn add @mslm/email_verify
 **Typescript**
 
 ```typescript
-import EmailVerify from "@mslm/email_verify";
+import EmailVerify from '@mslm/email_verify';
 
-// Replace 'YOUR_API_KEY' with your actual MSLM API key
-const emailVerify = new EmailVerify("YOUR_API_KEY");
+// Replace 'YOUR_API_KEY' with your actual Mslm API key
+const emailVerify = new EmailVerify('YOUR_API_KEY');
 
 // Example: Perform email verification
 emailVerify
-    .singleVerify("example@email.com")
+    .singleVerify('example@email.com')
     .then((result) => {
         console.log(result);
     })
@@ -42,17 +41,17 @@ emailVerify
     });
 ```
 
-**Javascript**
+**JavaScript**
 
 ```javascript
-const EmailVerify = require("@mslm/email_verify");
+const EmailVerify = require('@mslm/email_verify');
 
-// Replace 'YOUR_API_KEY' with your actual MSLM API key
-const emailVerify = new EmailVerify("YOUR_API_KEY");
+// Replace 'YOUR_API_KEY' with your actual Mslm API key
+const emailVerify = new EmailVerify('YOUR_API_KEY');
 
 // Example: Perform email verification
 emailVerify
-    .singleVerify("example@email.com")
+    .singleVerify('example@email.com')
     .then((result) => {
         console.log(result);
     })
@@ -60,9 +59,3 @@ emailVerify
         console.error(error);
     });
 ```
-
-## Running tests
-
-In order to run the tests, run:
-
-    $ npm test

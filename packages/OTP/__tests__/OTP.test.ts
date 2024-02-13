@@ -1,8 +1,8 @@
-import OTP from '../lib/OTP';
+import Otp from '../lib/Otp';
 
-let otp = new OTP('');
+let otp = new Otp();
 
-describe('OTP', () => {
+describe('Otp', () => {
     test('Send', async () => {
         try {
             const data = await otp.send('+10000000000', 'hi there', 6, 6000);

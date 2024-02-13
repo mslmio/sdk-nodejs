@@ -1,7 +1,12 @@
 {
     "name": "@mslm/email_verify",
     "version": "1.0.0",
-    "description": "> TODO: description",
+    "description": "The official Mslm Node.js SDK for handling email verification using the Mslm API.",
+    "keywords": [
+        "mslm",
+        "email",
+        "verify"
+    ],
     "author": "Mslm <support@mslm.io>",
     "homepage": "https://github.com/mslmio/sdk-nodejs",
     "license": "MIT",

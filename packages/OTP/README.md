@@ -1,11 +1,10 @@
-# `OTP`
+# `Otp`
 
 [![npm version](https://badge.fury.io/js/%40mslm%2Fotp.svg)](https://badge.fury.io/js/%40mslm%2Fotp)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![GitHub issues](https://img.shields.io/github/issues/mslmio/sdk-nodejs)](https://github.com/mslmio/sdk-nodejs/issues)
 
-The official MSLM Node.js SDK for handling One-Time Password (OTP)
-functionality.
+The official Mslm Node.js SDK for handling One-Time Password (Otp) functionality.
 
 ## Installation
 
@@ -23,16 +22,16 @@ yarn add @mslm/otp
 
 ## Usage
 
-**Typescript**
+**TypeScript**
 
 ```typescript
-import OTP from "@mslm/otp";
+import Otp from '@mslm/otp';
 
-// Replace 'YOUR_API_KEY' with your actual MSLM API key
-const otp = new OTP("YOUR_API_KEY");
+// Replace 'YOUR_API_KEY' with your actual Mslm API key
+const otp = new Otp('YOUR_API_KEY');
 
-// Example: Send OTP to a phone number
-otp.send("+1234567890", "sms_template", 6, 300)
+// Example: Send Otp to a phone number
+otp.send('+1234567890', 'sms_template', 6, 300)
     .then((response) => {
         console.log(response);
     })
@@ -40,8 +39,8 @@ otp.send("+1234567890", "sms_template", 6, 300)
         console.error(error);
     });
 
-// Example: Verify OTP
-otp.verify("+1234567890", "123456", true)
+// Example: Verify Otp
+otp.verify('+1234567890', '123456', true)
     .then((response) => {
         console.log(response);
     })
@@ -50,16 +49,16 @@ otp.verify("+1234567890", "123456", true)
     });
 ```
 
-**Javascript**
+**JavaScript**
 
 ```javascript
-const OTP = require("@mslm/otp");
+const Otp = require('@mslm/otp');
 
-// Replace 'YOUR_API_KEY' with your actual MSLM API key
-const otp = new OTP("YOUR_API_KEY");
+// Replace 'YOUR_API_KEY' with your actual Mslm API key
+const otp = new Otp('YOUR_API_KEY');
 
-// Example: Send OTP to a phone number
-otp.send("+1234567890", "sms_template", 6, 300)
+// Example: Send Otp to a phone number
+otp.send('+1234567890', 'sms_template', 6, 300)
     .then((response) => {
         console.log(response);
     })
@@ -67,8 +66,8 @@ otp.send("+1234567890", "sms_template", 6, 300)
         console.error(error);
     });
 
-// Example: Verify OTP
-otp.verify("+1234567890", "123456", true)
+// Example: Verify Otp
+otp.verify('+1234567890', '123456', true)
     .then((response) => {
         console.log(response);
     })
@@ -76,9 +75,3 @@ otp.verify("+1234567890", "123456", true)
         console.error(error);
     });
 ```
-
-## Running tests
-
-In order to run the tests, run:
-
-    $ npm test

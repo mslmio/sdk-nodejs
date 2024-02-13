@@ -2,10 +2,10 @@ import VERSION from './version';
 
 const clientUserAgent = `mslm/nodejs/${VERSION}`;
 
-export default class OTP {
+export default class Otp {
     private apiKey: string;
 
-    constructor(apiKey: string) {
+    constructor(apiKey: string = '') {
         this.apiKey = apiKey;
     }
 
