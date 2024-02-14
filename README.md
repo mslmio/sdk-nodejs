@@ -112,16 +112,19 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## About Mslm
 
-At Mslm, we're all about making things better. Where others see norm, we see opportunity.
+At Mslm, we're all about making things better. Where others see norm, we see
+opportunity.
 
-We build world-class solutions to the toughest problems. Excellence is a core value that defines our approach from top
-to bottom.
+We build world-class solutions to the toughest problems. Excellence is a core
+value that defines our approach from top to bottom.
 
-We're all about creating positive value for ourselves, our partners and our societies.
+We're all about creating positive value for ourselves, our partners and our
+societies.
 
-We do it by focusing on quality and the long-term, while intelligently maneuvering the complex realities of day-to-day
-business.
+We do it by focusing on quality and the long-term, while intelligently
+maneuvering the complex realities of day-to-day business.
 
-Our partners share our perspective, and we jointly produce truly world-class solutions to the toughest problems.
+Our partners share our perspective, and we jointly produce truly world-class
+solutions to the toughest problems.
 
 [![image](https://avatars.githubusercontent.com/u/50307970?s=200&v=4)](https://mslm.io/)
