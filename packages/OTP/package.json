@@ -1,0 +1,40 @@
+{
+    "name": "@mslm/otp",
+    "version": "1.0.0",
+    "description": "The official Mslm Node.js SDK for handling One-Time Password (Otp) functionality.",
+    "keywords": [
+        "mslm",
+        "otp"
+    ],
+    "author": "Mslm <support@mslm.io>",
+    "homepage": "https://github.com/mslmio/sdk-nodejs",
+    "license": "MIT",
+    "main": "lib/Otp.ts",
+    "directories": {
+        "lib": "lib",
+        "test": "__tests__"
+    },
+    "files": [
+        "lib"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mslmio/sdk-nodejs.git"
+    },
+    "scripts": {
+        "build": "tsc",
+        "tsc": "tsc --pretty --watch",
+        "test": "jest",
+        "test --watch": "jest --watchAll"
+    },
+    "jest": {
+        "preset": "ts-jest",
+        "testEnvironment": "node"
+    },
+    "bugs": {
+        "url": "https://github.com/mslmio/sdk-nodejs/issues"
+    },
+    "dependencies": {
+        "@mslm/common": "*"
+    }
+}
