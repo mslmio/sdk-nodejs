@@ -16,10 +16,7 @@ Ensure you meet the following requirements before running the project:
     - [npm](https://www.npmjs.com/get-npm)
     - [Yarn](https://yarnpkg.com/getting-started/install)
 
-3. **Internet Connection**: The provided code makes HTTP requests to external APIs, so an active internet connection is
-   required to fetch data.
-
-4. **API Keys**: For some functionalities, such as email verification and OTP, API keys are needed. Ensure you have the
+3. **API Keys**: For some functionalities, such as email verification and OTP, API keys are needed. Ensure you have the
    required API keys and configure them properly.
 
 ## Authentication
