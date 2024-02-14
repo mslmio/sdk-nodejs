@@ -1,0 +1,25 @@
+{
+    "name": "@mslm/common",
+    "version": "1.0.0",
+    "author": "Muhammad Ahmad <118795373+muhammadahmadmslm@users.noreply.github.com>",
+    "homepage": "https://github.com/mslmio/sdk-nodejs",
+    "license": "ISC",
+    "directories": {
+        "lib": "lib"
+    },
+    "files": [
+        "lib"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/mslmio/sdk-nodejs.git"
+    },
+    "scripts": {
+        "build": "tsc",
+        "tsc": "tsc --pretty --watch",
+        "test --watch": "jest --watchAll"
+    },
+    "bugs": {
+        "url": "https://github.com/mslmio/sdk-nodejs/issues"
+    }
+}

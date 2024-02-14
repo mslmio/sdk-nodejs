@@ -4,6 +4,9 @@
 import EmailVerify from '@mslm/email_verify';
 import Otp from '@mslm/otp';
 
+/**
+ * Main class for Mslm API functionalities.
+ */
 export default class Mslm {
     /**
      * Instance of the EmailVerify class for handling email verification.

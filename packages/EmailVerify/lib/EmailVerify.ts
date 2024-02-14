@@ -1,8 +1,8 @@
 import { EmailVerificationResult } from './EmailVerificationResult';
-import VERSION from './version';
-import ApiLimitError from './apiLimitError';
-
-const clientUserAgent = `mslm/nodejs/${VERSION}`;
+import ApiLimitError from '@mslm/common/lib/apiLimitError';
+import { EmailVerifyRouter } from './EmailVerifyRouter';
+import { EmailVerifyEndpoints } from './EmailVerifyEndpoint';
+import { HTTPMethod } from '@mslm/common/lib/HTTPMethod';
 
 /**
  * Class for performing email verification using the Mslm API.
@@ -24,39 +24,39 @@ export default class EmailVerify {
      * @returns A Promise resolving to an EmailVerificationResult.
      */
     public async singleVerify(email: string): Promise<EmailVerificationResult> {
-        // Construct the query parameters
-        const queryParams = new URLSearchParams({
-            email: email,
-            apikey: this.apiKey, // Use the stored API key
-        });
-
-        // Construct the full URL with query parameters
-        const apiUrl = `https://mslm.io/api/sv/v1?${queryParams.toString()}`;
-
-        const requestOptions = {
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-                'User-Agent': clientUserAgent,
-            },
-            method: 'GET',
-        };
+        const requestOptions = EmailVerifyRouter.prepareOptions(
+            email,
+            HTTPMethod.GET,
+            this.apiKey,
+            EmailVerifyEndpoints.SINGLE_VERIFY
+        );
 
         try {
-            // Make the HTTP GET request using fetch
-            const response = await fetch(apiUrl, requestOptions);
+            const headersArray: [string, string][] = Object.entries(requestOptions.headers || {})
+                .filter(([_, value]) => value !== undefined) // Filter out undefined values
+                .map(([key, value]) => [key, value as string]); // Ensure value is of type string
 
-            if (!this.is4xxOr5xx(response.status)) {
-                const emailVerificationResult: EmailVerificationResult = await response.json();
-                return emailVerificationResult;
-            } else {
-                // error cases when status code is in 400 range
-                if (response.status === 429) {
-                    throw new ApiLimitError();
+            const requestInit: RequestInit = {
+                method: requestOptions.method,
+                headers: headersArray,
+            };
+            // Make the HTTP GET request using fetch
+            if (requestOptions.path !== undefined) {
+                const response = await fetch(requestOptions.path ?? '', requestInit);
+                if (!this.is4xxOr5xx(response.status)) {
+                    const emailVerificationResult: EmailVerificationResult = await response.json();
+                    return emailVerificationResult;
                 } else {
-                    const errorData = await response.text();
-                    throw new Error(errorData);
+                    // error cases when status code is in 400 range
+                    if (response.status === 429) {
+                        throw new ApiLimitError();
+                    } else {
+                        const errorData = await response.text();
+                        throw new Error(errorData);
+                    }
                 }
+            } else {
+                throw new Error('Error: requestOptions.path is undefined');
             }
         } catch (error) {
             throw error;

@@ -22,9 +22,9 @@ describe('Mslm', () => {
         expect(data.mx[1].pref).toEqual(5);
         expect(data.mx[2].host).toEqual('ALT2.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[2].pref).toEqual(5);
-        expect(data.mx[3].host).toEqual('ALT4.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[3].host).toEqual('ALT3.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[3].pref).toEqual(10);
-        expect(data.mx[4].host).toEqual('ALT3.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[4].host).toEqual('ALT4.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[4].pref).toEqual(10);
     });
     test('Mslm Send Otp', async () => {

@@ -19,6 +19,7 @@
         "typescript": "^5.3.3"
     },
     "dependencies": {
-        "graph": "^0.2.0"
+        "graph": "^0.2.0",
+        "lerna": "^8.1.2"
     }
 }

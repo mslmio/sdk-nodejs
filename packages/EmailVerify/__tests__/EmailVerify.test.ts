@@ -18,13 +18,13 @@ describe('Email Verify', () => {
         expect(data.role).toEqual(true);
         expect(data.mx[0].host).toEqual('ASPMX.L.GOOGLE.COM.');
         expect(data.mx[0].pref).toEqual(1);
-        expect(data.mx[1].host).toEqual('ALT1.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[1].host).toEqual('ALT2.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[1].pref).toEqual(5);
-        expect(data.mx[2].host).toEqual('ALT2.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[2].host).toEqual('ALT1.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[2].pref).toEqual(5);
-        expect(data.mx[3].host).toEqual('ALT4.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[3].host).toEqual('ALT3.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[3].pref).toEqual(10);
-        expect(data.mx[4].host).toEqual('ALT3.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[4].host).toEqual('ALT4.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[4].pref).toEqual(10);
     });
 
@@ -43,13 +43,13 @@ describe('Email Verify', () => {
         expect(data.role).toEqual(false);
         expect(data.mx[0].host).toEqual('ASPMX.L.GOOGLE.COM.');
         expect(data.mx[0].pref).toEqual(1);
-        expect(data.mx[1].host).toEqual('ALT1.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[1].host).toEqual('ALT2.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[1].pref).toEqual(5);
-        expect(data.mx[2].host).toEqual('ALT2.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[2].host).toEqual('ALT1.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[2].pref).toEqual(5);
-        expect(data.mx[3].host).toEqual('ALT4.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[3].host).toEqual('ALT3.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[3].pref).toEqual(10);
-        expect(data.mx[4].host).toEqual('ALT3.ASPMX.L.GOOGLE.COM.');
+        expect(data.mx[4].host).toEqual('ALT4.ASPMX.L.GOOGLE.COM.');
         expect(data.mx[4].pref).toEqual(10);
     });
 
